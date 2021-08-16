@@ -17,4 +17,4 @@ class action_SO_line(models.Model):
 class action_auditing(models.Model):
     _inherit = 'account.move'
 
-    audited = fields.Boolean(string="Audited")
+    audited = fields.Boolean(string="Audited", store=True)
