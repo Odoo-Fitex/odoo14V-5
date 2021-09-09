@@ -49,6 +49,7 @@ class MrpProduction(models.Model):
         if moves:
             picking = self.env['stock.picking'].sudo().create({
                 'location_id': 50,
+                'mrp_production_id': self.id,
                 'location_dest_id': 43,
                 'picking_type_id': 43,
                 'scheduled_date': self.date_planned_start,
